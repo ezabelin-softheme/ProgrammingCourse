@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassesExercise2
 {
@@ -28,33 +23,62 @@ namespace ClassesExercise2
             this.p5 = p5;
         }
 
-        public double LengthSide(Point A, Point B)
+        public void Perim()
         {
-            double length = Math.Sqrt(Math.Pow(B.coordinateX - A.coordinateY,2) + Math.Pow(B.coordinateY - A.coordinateY,2));
+            double perim = 0;
+            double[] array;
+            if(p4 == null && p5 == null)
+            {
+                array = new[]
+                {
+                    LengthSide(p1, p2),
+                    LengthSide(p2, p3),
+                    LengthSide(p1, p3)
+                };
+
+                CountSum(array, ref perim);
+                Console.Write("Figure is triangle. Perimetr is - {0:#.##}", perim);
+            }
+            else if (p5 == null)
+            {
+                array = new[]
+                {
+                    LengthSide(p1, p2),
+                    LengthSide(p2, p3),
+                    LengthSide(p3, p4),
+                    LengthSide(p1, p4)
+                };
+
+                CountSum(array, ref perim);
+                Console.Write("Figure is quadrilateral. Perimetr is - {0:#.##}", perim);
+            }
+            else
+            {
+                array = new[]
+                {
+                    LengthSide(p1, p2),
+                    LengthSide(p2, p3),
+                    LengthSide(p3, p4),
+                    LengthSide(p4, p5),
+                    LengthSide(p1, p5)
+                };
+
+                CountSum(array, ref perim);
+                Console.Write("Figure is pentagon. Perimetr is - {0:#.##}", perim);
+            }
+        }
+
+        private double LengthSide(Point A, Point B)
+        {
+            double length = Math.Sqrt(Math.Pow(B.coordinateX - A.coordinateY, 2) + Math.Pow(B.coordinateY - A.coordinateY, 2));
             return length;
         }
 
-        public void Perim(double[] sideArray)
+        private void CountSum(double[] array, ref double perim)
         {
-            double perim = 0;
-            int arrayLength = sideArray.Length;
-
-            for (short i = 0; i < arrayLength - 1; i++)
+            for (short i = 0; i < array.Length - 1; i++)
             {
-                perim += perim + sideArray[i];
-            }
-
-            switch (arrayLength)
-            {
-                case 3:
-                    Console.Write("Figure is triangle. Perimetr is - {0}", perim);
-                    break;
-                case 4:
-                    Console.Write("Figure is quadrilateral. Perimetr is - {0}", perim);
-                    break;
-                case 5:
-                    Console.Write("Figure is pentagon. Perimetr is - {0}", perim);
-                    break;
+                perim += perim + array[i];
             }
         }
     }

@@ -1,18 +1,19 @@
-﻿
+﻿using System;
+
 namespace ClassesExercise5
 {
     class Invoice
     {
-        public readonly int Account;
-        public readonly string Customer;
+        private readonly int _account;
+        private readonly string _customer;
         private string _article;
         private int _quantity;
         private double _pricePerUnit;
 
         public Invoice(int account, string customer)
         {
-            Account = account;
-            Customer = customer;
+            _account = account;
+            _customer = customer;
         }
 
         public string Article
@@ -47,6 +48,15 @@ namespace ClassesExercise5
             }
 
             return totalInvoice;
+        }
+
+        public void PrintInvoiceSummary()
+        {
+            Console.WriteLine(
+                "Total invoice for customer {0}({1}) for {2} quantity of {3} with price {4} grn per unit:",
+                _customer, _account, Quantity, Article, PricePerUnit);
+            Console.WriteLine("with NDS - {0} grn", CountTotalInvoice(true));
+            Console.WriteLine("without NDS - {0} grn", CountTotalInvoice(false));
         }
     }
 }
