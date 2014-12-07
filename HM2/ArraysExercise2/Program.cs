@@ -29,6 +29,32 @@ namespace ArraysExercise2
         private static int[] SubArray(int[] array, int index, int count)
         {
             int[] subArray = new int[count];
+            int k = 0;
+
+            do
+            {
+                int step = index + k;
+
+                if (step < array.Length)
+                {
+                    subArray[k] = array[step];
+                }
+
+                else
+                {
+                    subArray[k] = 1;
+                }
+
+                k++;
+
+            } while (k < count);
+
+            return subArray;
+        }
+
+        private static int[] SubArrayUsingDefaultArrayMethod(int[] array, int index, int count)
+        {
+            int[] subArray = new int[count];
             if ((array.Length-index)>=count)
                 Array.Copy(array, index, subArray, subArray[0], count);
             else if ((array.Length - index) < count)

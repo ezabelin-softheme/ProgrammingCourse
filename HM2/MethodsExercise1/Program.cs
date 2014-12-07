@@ -8,34 +8,37 @@ namespace MethodsExercise1
         private static short _firstNumber;
         private static short _seconddNumber;
 
-        private static float Add(int a, int b)
+        private static string Add(int a, int b)
         {
             float result = a + b;
-            return result;
+            return string.Format("{0} + {1} = {2}", a, b, result);
         }
 
-        private static float Sub(int a, int b)
+        private static string Sub(int a, int b)
         {
             float result = a - b;
-            return result;
+            return string.Format("{0} - {1} = {2}", _firstNumber, _seconddNumber, result);
         }
 
-        private static float Mul(int a, int b)
+        private static string Mul(int a, int b)
         {
             float result = a * b;
-            return result;
+            return string.Format("{0} * {1} = {2}", _firstNumber, _seconddNumber, result);
         }
 
-        private static float Div(int a, int b)
+        private static string Div(int a, int b)
         {
-            float result = (float) a / b;
-            return result;
+            if (b != 0)
+            {
+                float result = (float)a / b;
+                return string.Format("{0} / {1} = {2}", _firstNumber, _seconddNumber, result);
+            }
+
+            return "Извините, деление на 0 невозможно";
         }
 
         static void Main()
         {
-            float result;
-
             Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Введите первое число");
 
@@ -53,27 +56,16 @@ namespace MethodsExercise1
             switch (sign)
             {
                 case "+":
-                    result = Add(_firstNumber, _seconddNumber);
-                    Console.WriteLine("{0} + {1} = {2}", _firstNumber, _seconddNumber, result);
+                    Console.WriteLine(Add(_firstNumber, _seconddNumber));
                     break;
                 case "-":
-                    result = Sub(_firstNumber, _seconddNumber);
-                    Console.WriteLine("{0} - {1} = {2}", _firstNumber, _seconddNumber, result);
+                    Console.WriteLine(Sub(_firstNumber, _seconddNumber));
                     break;
                 case "*":
-                    result = Mul(_firstNumber, _seconddNumber);
-                    Console.WriteLine("{0} * {1} = {2}", _firstNumber, _seconddNumber, result);
+                    Console.WriteLine(Mul(_firstNumber, _seconddNumber));
                     break;
                 case "/":
-                    if (_seconddNumber != 0)
-                    {
-                        result = Div(_firstNumber, _seconddNumber);
-                        Console.WriteLine("{0} / {1} = {2}", _firstNumber, _seconddNumber, result);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Извините, деление на 0 невозможно");
-                    }
+                    Console.WriteLine(Div(_firstNumber, _seconddNumber));
                     break;
                 default:
                     Console.WriteLine("Извините, введенная операция не поддерживается");

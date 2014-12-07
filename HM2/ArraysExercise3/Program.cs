@@ -5,7 +5,20 @@ namespace ArraysExercise3
 {
     class Program
     {
-        private static int[] ExtendArrayToOneElement(int[] array, int newValue)
+        private static int[] ExtendArrayToOneElementMy(int[] array, int newValue)
+        {
+            int[] newArray = new int[array.Length+1];
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                newArray[i] = array[i];
+            }
+
+            newArray[newArray.Length - 1] = newValue;
+            return newArray;
+        }
+
+        private static int[] ExtendArrayToOneElementMyUsingDefaultMethods(int[] array, int newValue)
         {
             int[] newArray = (int[])array.Clone();
             Array.Resize(ref newArray, array.Length + 1);
@@ -24,7 +37,7 @@ namespace ArraysExercise3
                 Console.WriteLine(element);
             }
 
-            int[] extendedArray = ExtendArrayToOneElement(array, 6);
+            int[] extendedArray = ExtendArrayToOneElementMy(array, 6);
 
             Console.WriteLine("Расширенный массив:");
             foreach (int element in extendedArray)
