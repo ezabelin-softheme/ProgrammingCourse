@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticExercise1", "StaticExercise1\StaticExercise1.csproj", "{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticExercise2", "StaticExercise2\StaticExercise2.csproj", "{FC3FDDBE-43F9-4E35-820F-64062F23896B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Release|ARM.ActiveCfg = Release|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Release|x64.ActiveCfg = Release|Any CPU
+		{BDEAE3E8-6F8A-4663-AD4C-80EABB44A251}.Release|x86.ActiveCfg = Release|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Release|x64.ActiveCfg = Release|Any CPU
+		{FC3FDDBE-43F9-4E35-820F-64062F23896B}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
