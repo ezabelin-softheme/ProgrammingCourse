@@ -26,7 +26,7 @@ namespace GenericsExercise2
                 TValue resultValue = default(TValue);
                 for (int i = 0; i < _key.Length; i++)
                 {
-                    if (_key[i].ToString() == key.ToString())
+                    if (_key[i].Equals(key))
                     {
                         resultValue = _value[i];
                         return resultValue;
@@ -38,7 +38,7 @@ namespace GenericsExercise2
             {
                 for (int i = 0; i < _key.Length; i++)
                 {
-                    if (_key[i].ToString() == key.ToString())
+                    if (_key[i].Equals(key))
                     {
                         _value[i] = value;
                     }
